@@ -1,0 +1,15 @@
+.footer-container{
+    background-color: white;
+    border-color: #04353d;
+    border: 1px solid #04353d;
+    border-radius: 5px;
+    display: flex;
+    padding-left: 10px;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: #04353d;
+    font-weight: bold;
+    font-size: 20px;
+}

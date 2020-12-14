@@ -1,0 +1,37 @@
+[{
+    "id":1,
+    "name":"cake",
+    "price":620,
+    "image":"bake1"
+   
+  },
+{
+  "id":2,
+  "name":"Sandwitch",
+  "price":120,
+  "image":"bake2"
+},
+{
+  "id":3,
+  "name":"Cutlet",
+  "price":30,
+  "image":"bake3"
+},
+{
+  "id":4,
+  "name":"Burger",
+  "price":130,
+  "image":"bake4"
+},
+{
+  "id":5,
+  "name":"French Chips",
+  "price":80,
+  "image":"bake5"
+},
+{
+  "id":6,
+  "name":"Egg-Puffs",
+  "price":20,
+  "image":"bake6"
+}]

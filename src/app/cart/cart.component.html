@@ -1,0 +1,172 @@
+<!--<ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="static-1">
+    <ngb-panel id="static-1" title="Item Details">
+      <ng-template ngbPanelContent>
+
+          <div id="collapseExample" [ngbCollapse]="false">
+              <div class="card">
+                <div class="card-body">
+                 <h1 style="color:#04353d;font-weight: bold;">Items in your cart:{{itemtot}}
+                    <span style="margin-left: 5%;margin-right: 22%;color: black;font-weight: bold;">
+                    Total value is: {{allTotal}}</span>
+                   
+                   </h1>
+                    
+                    <table class="table table-bordered table-responsive table-hover">
+                      <thead class="thead-light">
+                      <tr>
+                        <th>Image</th>
+                        <th>Name & Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Add/Remove</th>
+                        <th>Total For Item</th>
+                      </tr>
+                      </thead>
+                      <tr *ngFor="let prod of productAddedTocart;let q = index">
+                        <td><img src="/assets/images/{{prod.image}}.jpg" style="width:300px;height: 250px;" ></td>
+                        <td class="text-center">{{prod.name}}</td>
+                        <td>{{prod.price}}</td>
+                        <td>{{prod.Quantity}}</td>
+                        
+                        <td>
+                          <div class="form-inline">
+                          <button type="button" (click)="onAddQuantity(prod)" class="btn btn-success">+</button> 
+                          <input type="text"  [ngModel] ="prod.Quantity" (ngModelChange) ="prod.Quantity=$event" class="form-control form-inline" id="count">
+                          <button type="button" (click)="onRemoveQuantity(prod)" class="btn btn-danger">-</button>
+                          </div>
+                        </td>
+                        <td>{{prod.price * prod.Quantity}}</td>
+                      </tr>
+                    </table>
+                </div>
+              </div>
+            </div>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel id="static-2">
+      <ng-template ngbPanelTitle>
+        <span>&#9733; <b>Order</b> Details &#9733;</span>
+      </ng-template>
+     
+    </ngb-panel>
+    <ngb-panel id="static-3" title="Confirm Your Order" >
+      <ng-template ngbPanelContent>
+       <table>
+         <tr class="col-md-12">
+            <td class="col-md-6"><h2>Item Details</h2></td>
+           <td class="col-md-6"><h2>Delivery Details</h2></td>          
+         </tr>
+         <tr class="col-md-12">
+           <td class="col-md-6">
+              -- Item details Table 
+             <table class="table table-bordered  table-hover">
+                <thead class="thead-light">
+                <tr>
+                  <th>Name & Description</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total For Item</th>
+                </tr>
+                </thead>
+                <tr *ngFor="let prod of productAddedTocart;let q = index">
+                  <td class="text-center">{{prod.name}}</td>
+                  <td>{{prod.price}}</td>
+                  <td>{{prod.Quantity}}</td>
+                  <td>{{prod.price * prod.Quantity}}</td>
+                </tr>
+              </table>
+
+           </td>
+         </tr>
+       </table>
+      
+          
+         
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>-->
+
+<!--<div class="cart-header" style="display: flex;justify-content: center;font-weight: bold;">
+  <h1 style="margin-top: 50px;">My Cart</h1>
+</div>
+  <div class="row">
+      <div *ngFor="let prod of productAddedTocart;let q = index" class="col-sm-6 p-5">
+      <div class="card" style="height: 510px;">
+        <mat-icon matChipRemove  (click)="onDelete(prod.id)" style="cursor: grabbing;">cancel</mat-icon>
+        <img src="/assets/images/{{prod.image}}.jpg" class="card-img-top" style="height: 250px;">
+        <div class="card-body" style="display:flex;flex-direction: column;justify-content: center;">
+          <h2 class="card-title">{{prod.name}}</h2>
+          <h3><i class="fas fa-rupee-sign"></i>price:{{prod.price}}</h3>
+          <h3>Quantity:{{prod.Quantity}}</h3>
+          <div class="card-text form-inline">
+              <button type="button" (click)="onAddQuantity(prod)" class="btn btn-success">+</button> 
+              <input type="text"  [ngModel] ="prod.Quantity" (ngModelChange) ="prod.Quantity=$event"
+               class="form-control form-inline" id="count" style="width:50px">
+              <button type="button" (click)="onRemoveQuantity(prod)" class="btn btn-danger">-</button>
+          </div>
+          <h3 style="padding-top: 5px;"><i class="fas fa-rupee-sign"></i>Total:{{prod.price * prod.Quantity}}</h3>
+        </div>
+      </div>
+         
+      </div>
+     
+  </div>
+  <div class="card-details">
+    <h2> <i class="fas fa-rupee-sign"></i>Total Amount: {{allTotal}}</h2>
+     <button class="btn btn-danger butt">Place Order</button>
+  </div>-->
+ 
+
+  <!--<div class="container">
+    <h2 style="display: flex;justify-content: center;font-weight: bold;">
+      <i class="fas fa-rupee-sign" style="padding-top: 3px;"></i>Total Amount: {{allTotal}}</h2>
+    <div  *ngFor="let prod of productAddedTocart;let q = index" class="col-sm-6 p-5"
+     style="display: flex;flex-direction: row;justify-content: space-evenly;flex-wrap: wrap;margin: 0 auto;" >
+      <mat-icon matChipRemove  (click)="onDelete(prod.id)" style="cursor: grabbing">cancel</mat-icon>
+      <img src="/assets/images/{{prod.image}}.jpg" class="card-img-top" 
+      style="height: 50px;width: 50px;float: left;">
+      <h2 >{{prod.name}}</h2>
+          <h3 ><i class="fas fa-rupee-sign"></i>price:{{prod.price}}</h3>
+          <h3 >Quantity:{{prod.Quantity}}</h3>
+          <div>
+            <button type="button" (click)="onAddQuantity(prod)" class="btn btn-success">+</button> 
+            <button type="button" (click)="onRemoveQuantity(prod)" class="btn btn-danger">-</button>
+        </div>
+        <td>Total:{{prod.price * prod.Quantity}}</td>
+    </div>
+
+  </div>-->
+  <div class="cart-header" style="display: flex;justify-content: center;font-weight: bold;">
+    <h1 style="margin-top: 50px;">My Cart</h1>
+  </div>
+  <h2>Total Amount: {{allTotal |currency:'INR'}}</h2>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th >Item</th>
+        <th>Price</th>
+        <th colspan="2">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of productAddedTocart;let q = index">
+        <td><mat-icon matChipRemove  (click)="onDelete(prod.id)" style="cursor: grabbing">cancel</mat-icon>
+          <img src="/assets/images/{{prod.image}}.jpg" class="card-img-top" 
+          style="height: 50px;width: 40px;">
+          {{prod.name}}</td>
+        <td>{{prod.price |currency:'INR'}}</td>
+        <td>{{prod.Quantity}} </td>
+        <td><i class="material-icons" (click)="onAddQuantity(prod)" style="cursor: copy;">
+            keyboard_arrow_up</i>
+          <i class="material-icons" (click)="onRemoveQuantity(prod)" style="cursor: copy;">
+            keyboard_arrow_down</i>
+            <input [ngModel]="prod.price*prod.Quantity" style="width: 50px;">
+          </td>  
+      </tr>
+    </tbody>
+  </table>
+  <div class="cart-header" style="display: flex;justify-content: center;font-weight: bold;">
+ <button type="button" class="btn btn-primary" style="margin-bottom: 20px;background-color: #04353d;color: white;
+ font-weight: bold;" routerLink="/checkout">CHECKOUT</button>
+  </div>

@@ -1,0 +1,15 @@
+.card-details{
+    display: flex;
+    padding-left: 13px;
+    font-weight: bold;
+    font-family: cursive;
+
+}
+.butt{
+    margin-left: auto;
+    margin-right: 10px;
+    height: 40px;
+    margin-top: 3px;
+    color: white;
+    background-color: #04353d;
+}

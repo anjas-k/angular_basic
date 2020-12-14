@@ -1,0 +1,16 @@
+.navbar-container{
+   display: flex;
+   padding-left: 25px;
+   padding-top: 10px;
+   background-color: #04353d;
+   color: white;
+   font-weight: bold;
+   font-size: 20px;
+   padding-bottom: 8px;
+}
+.nav-items{
+    margin-left: auto;
+    margin-right: 50px;
+    }
+  
+

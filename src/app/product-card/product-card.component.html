@@ -1,0 +1,10 @@
+<div class="card-deck">
+    <div class="card" style="height: 400px;">
+        <img class="card-img-top" src="/assets/images/{{product.image}}.jpg" style="height: 250px;">
+            <div class="card-body">
+                <h1 class="card-title">{{product.name}}</h1>
+                <h4 class="card-text" style="font-size: 20px;"><i class="fas fa-rupee-sign"></i>{{product.price}}/-</h4>
+                <a class="btn btn-primary" (click)="OnAddCart(product)">Add to Cart</a>
+            </div>
+    </div>
+</div>    

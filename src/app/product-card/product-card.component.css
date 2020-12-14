@@ -1,0 +1,12 @@
+.card{
+    color: white;
+    font-weight: bold;
+    background-color: #04353d;
+    justify-content: center;
+}
+.btn{
+    background-color: white;
+    color: #04353d;
+    font-weight: bold;
+    justify-content: center;
+}
